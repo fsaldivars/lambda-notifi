@@ -1,0 +1,21 @@
+= AWS Lambda, SNS and Scala 2.12.4
+
+This project shows the way to manipulate service SNS Push notification  creating a topic. In this case the only you need is a  account in aws services and full access for SNS Service
+
+== Scala as lib
+We use Scala to get acces to SNS Client API manipuate and create this kinfd of objects the reason for use it was create a awesome lambda in Scale in most important use AKKA for call another 
+AWS:Lambda function in order to get into save the notification into DynamoDB and other monerias..
+
+== Package and Deploy Lambda Function
+	. First test our lambda in order to put valid credentials: `sbt clean test`
+	. In order to generate a fat jar: `sbt assembly`
+
+	
+	. TODO: Never tested always use aws api services for future and more time
++
+	--In order to deploy lambda: `aws deploy --stack-name **.jar`
+	--In order to invoke: `aws lambda invokr`
+	--In order to delete: `aws delete-stack --stack-name **.jar`
+```
++
+
